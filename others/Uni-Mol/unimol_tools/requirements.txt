@@ -1,0 +1,9 @@
+numpy==1.22.4
+pandas==1.4.0
+scikit-learn==1.5.0
+torch
+joblib
+rdkit
+pyyaml
+addict
+tqdm

@@ -1,0 +1,9 @@
+# Dataset that explicitly specifies which ligands should be considered in the training and evaluation phase.
+# Ligands are declared as a list of PDB HET group names separated with a comma without spaces.
+
+HEADER:  protein  ligands
+
+liganated/1a82a.pdb   DNN,ATP
+liganated/1aaxa.pdb   BPM,BOG
+liganated/1t7qa.pdb   COA
+liganated/2ck3b.pdb   ANP

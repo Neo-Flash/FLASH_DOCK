@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+#
+# Set maximum memory for JVM heap
+#
+export JAVA_OPTS="$JAVA_OPTS -Xmx2048m"
+
+#
+# Set this to change the Java installation that will be used to run the program:
+#
+#JAVA_HOME="/opt/java8"
+
+
+export JAVA_OPTS="$JAVA_OPTS"
+
+if [[ "$OSTYPE" = msys* ]] ; then
+    PATH_SEPARATOR=';' # for win ... we want this script to run on Windows with MSYS / Git Bash
+else
+    PATH_SEPARATOR=':' # for unix
+fi
+
+THIS_SCRIPT_DIR_REL_PATH=`dirname "${BASH_SOURCE[0]}"`
+export INSTALL_DIR="$THIS_SCRIPT_DIR_REL_PATH"
+
+CLASSPATH="${INSTALL_DIR}/bin/p2rank.jar${PATH_SEPARATOR}${INSTALL_DIR}/bin/lib/*"
+
+# Determine the Java command to use to start the JVM.
+if [ -n "$JAVA_HOME" ] ; then
+    JAVACMD="$JAVA_HOME/bin/java"
+else
+    JAVACMD="java"
+fi
+
+
+"$JAVACMD" $JAVA_OPTS -cp "${CLASSPATH}" cz.siret.prank.program.Main "$@"

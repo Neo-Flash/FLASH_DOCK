@@ -1,0 +1,24 @@
+# Dataset for rescoring ConCavity predictions / evaluating rescoring.
+
+# Note: 'prank rescore' expects 2 columns: prediction, protein
+# Providing protein (with or without ligands) that was used to calculate the prediction is required.
+# Proteins have to be liganated only if you want to calculate metrics by running 'prank eval-rescore'.
+
+
+PARAM.PREDICTION_METHOD=concavity
+
+
+# specifies that ligands are separated by TER record (relevant only for legacy CHEN11 and derived datasets)
+# remove for other datasets
+PARAM.LIGANDS_SEPARATED_BY_TER=true
+
+
+HEADER: prediction protein
+
+predictions/concavity/1a82a.pdb/1a82a_concavity_pocket.pdb  liganated/1a82a.pdb
+predictions/concavity/1aaxa.pdb/1aaxa_concavity_pocket.pdb  liganated/1aaxa.pdb
+predictions/concavity/1t7qa.pdb/1t7qa_concavity_pocket.pdb  liganated/1t7qa.pdb
+predictions/concavity/2ck3b.pdb/2ck3b_concavity_pocket.pdb  liganated/2ck3b.pdb
+
+
+
