@@ -4,7 +4,7 @@ To use Flash_Dock, you need to download the `unimol_docking_v2_240517.pt` model 
 
 ### Steps:
 
-1. Download the file from the following link:  
+1. Download the file and install the required dependencies from the following link:  
    [https://github.com/deepmodeling/Uni-Mol/tree/main/unimol_docking_v2](https://github.com/deepmodeling/Uni-Mol/tree/main/unimol_docking_v2)
 
 2. Place the file in the directory:  
